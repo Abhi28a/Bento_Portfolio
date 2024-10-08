@@ -342,6 +342,26 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+    .left1 {
+        background-color: transparent;
+        color: #4c7766;
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically if needed */
+        border-radius: 1em;
+        font-size: 1em;
+        flex: 2;
+        border: 4px dotted #ebe6e0;
+        padding: 20px; /* Add padding for better spacing */
+        height: 100%; /* Ensure full height for centering */
+        text-align: center; /* Center text alignment */
+    }
+
+    .left1 span {
+        display: block; /* Ensure each span takes up full width */
+    }
+
     .nav2 {
         display: none; /* Hide menu on mobile by default */
     }
@@ -355,13 +375,14 @@ body {
     }
 
     .main.shifted {
-        margin-top: 140px; /* Adjust margin to fit menu height */
+        margin-top: 140px;
     }
 
     .main {
         flex-direction: column;
         align-items: center;
         height: auto;
+        transition: margin-top 0.3s ease; /* Smooth transition */
     }
 
     .col-left, .col-right, .row {
@@ -379,14 +400,15 @@ body {
         width: 100%; /* Make image responsive */
     }
 
-    .top{
+    .top {
         width: auto;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         padding: 20px;
     }
-.bottom {
+
+    .bottom {
         width: auto;
         flex-direction: column;
         align-items: center;

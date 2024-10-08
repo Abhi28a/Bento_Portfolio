@@ -21,28 +21,25 @@
             <div class="loading-text">Loading</div>
         </div>
 
-    <div class="navContainer">
-        <div class="nav1">Saggam Abhishek</div>
+        <div class="navContainer">
+            <div class="nav1">Saggam Abhishek</div>
 
-        <div class="nav2">
-            <div class="navItem"><a href="projects.html">Projects</a></div>
-            <div class="navItem"><a href="about.html">About Me</a></div>
-            <div class="navItem"><a href="contact.html">Contact</a></div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav2" id="navLinks">
+                <div class="navItem"><a href="projects.html">Projects</a></div>
+                <div class="navItem"><a href="about.html">About Me</a></div>
+                <div class="navItem"><a href="contact.html">Contact</a></div>
+            </div>
         </div>
-    </div>
     <div class="breadcrumbs">
         <div class="buttonB">
             <a href="index.html"><i class="fas fa-arrow-left"></i> Back</a>
         </div>
     </div>
-    <script>
-        window.addEventListener('load', () => {
-            const loadingScreen = document.getElementById('loading-screen');
-            setTimeout(() => {
-                loadingScreen.classList.add('hidden');
-            }, 1500);
-        });
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>
