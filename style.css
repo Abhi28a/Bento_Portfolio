@@ -74,6 +74,10 @@ body {
     justify-content: space-between;
     border-radius: 1.5em;
     background-color: #ebe6e0;
+    position: relative; /* Needed for absolute positioning of the nav menu */
+    align-items: center;
+    justify-content: center;
+
 }
 
 .navItem {
@@ -88,21 +92,50 @@ body {
     color: #4c7766;
 }
 
-.nav2 {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    padding-right: 10px;
-    align-items: center;
-}
-
 .nav1 {
     flex: 4;
     color: #000;
     font-family: 'Qlassy', sans-serif;
-    font-size: x-large;
+    font-size: 1.7em;
     transition: color 0.3s ease-in-out;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+
+
+}
+
+.nav2 {
+    display: flex; /* Align nav items in a row */
+    justify-content: space-around; /* Even spacing between items */
+    align-items: center; /* Center align items vertically */
+}
+
+.hamburger {
+    display: none; /* Initially hidden */
+    color: #4c7766;
+    cursor: pointer; /* Add cursor pointer for hover effect */
+}
+
+.nav-active {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position relative to navContainer */
+    top: 80px; /* Adjust based on your layout */
+    right: 0;
+    background-color: #ebe6e0; /* Match the background */
+    width: 100%; /* Ensure it occupies full width */
+    border-radius: 1.5em; /* Rounded bottom corners */
+    z-index: 10; /* Stack above other elements */
+}
+
+.navItem {
+    padding: 10px 20px; /* Add padding to menu items */
+    text-align: center; /* Center align text */
+}
+
+.navItem a {
+    color: #4c7766; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust font size */
 }
 
 .navItem:hover {
@@ -117,6 +150,7 @@ body {
     height: 83vh;
     justify-content: center;
     align-items: center;
+    transition: margin-top 0.3s; /* Smooth transition for margin changes */
 }
 
 .col-left, .col-right {
@@ -243,6 +277,7 @@ body {
     border-radius: 1em;
     padding: 40px;
     flex: 3;
+    height: fit-content;
 }
 
 .project1 {
@@ -308,29 +343,19 @@ body {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .nav2 {
-        display: none;
+        display: none; /* Hide menu on mobile by default */
     }
 
     .hamburger {
-        display: block;
-        color: #4c7766;
+        display: block; /* Show hamburger icon on mobile */
     }
 
     .nav-active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #ebe6e0;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
+        display: flex; /* Show menu when active */
     }
 
-    .navItem {
-        margin: 10px 0;
-        padding: 10px;
-        text-align: center;
+    .main.shifted {
+        margin-top: 140px; /* Adjust margin to fit menu height */
     }
 
     .main {
@@ -342,7 +367,16 @@ body {
     .col-left, .col-right, .row {
         flex-direction: column;
         height: auto;
-        width: 100%;
+        width: 100%; /* Ensure full width on mobile */
+    }
+
+    .bottomChild {
+        padding-right: 0;
+        padding-bottom: 20px; /* Adjust padding on mobile */
+    }
+
+    .right1 img {
+        width: 100%; /* Make image responsive */
     }
 
     .top{
@@ -357,8 +391,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 25px;
         gap: 2em;
     }
-    
 }

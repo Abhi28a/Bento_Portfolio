@@ -26,6 +26,10 @@
         <div class="navContainer">
             <div class="nav1">Saggam Abhishek</div>
 
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <div class="nav2" id="navLinks">
                 <div class="navItem"><a href="projects.html">Projects</a></div>
                 <div class="navItem"><a href="about.html">About Me</a></div>
@@ -86,6 +90,15 @@
             }, 1500);
         });
 
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const mainContent = document.querySelector('.main');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            mainContent.classList.toggle('shifted'); // Add class to shift main content down
+        });
     </script>
 </body>
 </html>
