@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saggam Abhishek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert('Nah! Sorry bro 😎');
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-text">Loading</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="fade-in">
+        <div class="navContainer">
+            <div class="nav1">Saggam Abhishek</div>
+
+            <div class="nav2" id="navLinks">
+                <div class="navItem"><a href="projects.html">Projects</a></div>
+                <div class="navItem"><a href="about.html">About Me</a></div>
+                <div class="navItem"><a href="contact.html">Contact</a></div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="col-left">
+                <div class="row row1">
+                    <div class="row-col1 left1">
+                        <span>Innovator</span> Shaping Web Development with<br>
+                        <span>User-Centric Problem Solving</span> and Emerging Technologies.
+                    </div>
+                    <div class="row-col1 right1">
+                        <img src="my-avatar.png" alt="Abhishek" height="350px">
+                    </div>
+                </div>
+                <div class="row row2">
+                    <div class="row-col2 left2">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="row-col2 right2">
+                        <div class="contactBox">I am an innovative web developer who seamlessly integrates cutting-edge technologies with user-centric design. I craft transformative digital experiences that tackle complex problems and foster a change of perspective. Driven by my passion for exploration and innovation, I continually push the boundaries of web development to create impactful solutions that resonate with users worldwide.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="row top">
+                    <div class="project1">
+                        <div class="topChild1" style="cursor: pointer;">SmartCity<hr style="border: none; height: 1px; background-color: #ebe6e0; width: 100%;"></div>
+                        <div class="topChild2" style="border-radius: 3em;"><img src="project1.png" height="300px" width="500px"></div>
+                    </div>
+                    <div class="project2" style="cursor: pointer;">Banking and Finance Management <hr style="border: none; height: 1px; background-color: #ebe6e0; width: 100%;"></div>
+                    <div class="project3" style="cursor: pointer;">Movies Library <hr style="border: none; height: 1px; background-color: #ebe6e0; width: 100%;"></div>
+                    <div class="project3" style="cursor: pointer;">Coming Soon <hr style="border: none; height: 1px; background-color: #ebe6e0; width: 100%;"></div>
+                </div>
+                <div class="row bottom">
+                    <div class="footItem">
+                        <a href="https://github.com/Abhi28a/" target="_blank"><i class="fab fa-github" style="color: #333;"></i> Github</a>
+                    </div>
+                    <div class="footItem">
+                        <a href="https://www.linkedin.com/in/abhishek-saggam/" target="_blank"><i class="fab fa-linkedin" style="color: #0077b5;"></i> LinkedIn</a>
+                    </div>
+                    <div class="footItem">
+                        <a href="https://www.instagram.com/abhishek_saggam/" target="_blank"><i class="fab fa-instagram" style="color: #e1306c;"></i> Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1500);
+        });
+
+    </script>
+</body>
+</html>

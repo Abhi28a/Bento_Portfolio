@@ -1,0 +1,364 @@
+@import url('https://fonts.cdnfonts.com/css/qlassy');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 8px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---------loading----------- */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4c7766;
+    color: #ebe6e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Qlassy', sans-serif;
+    font-size: 2em;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2.5s forwards ease-in;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.loading-text {
+    font-weight: bold;
+}
+
+.loading-text::after {
+    content: '...';
+    animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+
+/* ---------loading----------- */
+
+.navContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 1.5em;
+    background-color: #ebe6e0;
+}
+
+.navItem {
+    color: #4c7766;
+    font-size: medium;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: #4c7766;
+}
+
+.nav2 {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.nav1 {
+    flex: 4;
+    color: #000;
+    font-family: 'Qlassy', sans-serif;
+    font-size: x-large;
+    transition: color 0.3s ease-in-out;
+    padding-left: 20px;
+}
+
+.navItem:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------- */
+.main {
+    display: flex;
+    padding: 10px;
+    gap: 1em;
+    height: 83vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-left, .col-right {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 2em;
+}
+
+.col-left {
+    flex: 2;
+}
+
+.col-right {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    gap: 1em;
+    flex: 1;
+    border-radius: 1em;
+}
+
+.row1, .row2 {
+    flex: 1;
+    gap: 1em;
+}
+
+.row-col1, .row-col2 {
+    flex: 1;
+    border-radius: 1em;
+    padding: 20px;
+}
+
+.left1 {
+    background-color: transparent;
+    color: #4c7766;
+    display: flexbox;
+    padding-top: 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    font-size: 1em;
+    flex: 2;
+    border: 4px dotted #ebe6e0;
+}
+
+.left1 span {
+    font-family: 'Qlassy', sans-serif;
+    font-size: 2.5em;
+}
+
+.bottomChild {
+    display: flex;
+    padding-right: 400px;
+    padding-bottom: 100px;
+}
+
+.right1 {
+    background-color: #ebe6e0;
+    color: #4c7766;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 1em;
+    flex: 1;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.right1 img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.left2 {
+    background-color: #ebe6e0;
+    color: #4c7766;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    flex: 1;
+    font-size: 2.5em;
+    font-family: 'Qlassy', sans-serif;
+    cursor: pointer;
+}
+
+.left2 a {
+    text-decoration: none;
+    color: #4c7766;
+}
+
+.left2 a:hover {
+    transform: scale(1.2);
+}
+
+.right2 {
+    background-color: #4c7766;
+    color: #ebe6e0;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1em;
+}
+
+.contactBox {
+    padding: 2.5em;
+    border: 3px dotted #ebe6e0;
+}
+
+.top {
+    background-color: #4c7766;
+    color: #ebe6e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 1em;
+    padding: 40px;
+    flex: 3;
+}
+
+.project1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.topChild2 img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.bottom {
+    flex: 1;
+    background-color: #ebe6e0;
+    color: #4c7766;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1em;
+    padding: 30px;
+}
+
+.footItem {
+    color: #4c7766;
+    font-family: 'Qlassy', sans-serif;
+    font-size: larger;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footItem:hover {
+    transform: scale(1.1);
+}
+
+.footItem a {
+    text-decoration: none;
+    color: #4c7766;
+}
+
+.breadcrumbs {
+    display: flex;
+}
+
+.buttonB {
+    border: 3px dotted #4c7766;
+    color: #000;
+    margin-left: 10px;
+    padding: 10px;
+    margin-top: 1em;
+    border-radius: 2em;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.buttonB a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .nav2 {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: #4c7766;
+    }
+
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ebe6e0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .navItem {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .col-left, .col-right, .row {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .top{
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+    }
+.bottom {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 2em;
+    }
+    
+}

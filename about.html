@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saggam Abhishek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert('Nah! Sorry bro 😎');
+        });
+    </script>
+
+</head>
+<body>
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <div class="loading-text">Loading</div>
+        </div>
+
+    <div class="navContainer">
+        <div class="nav1">Saggam Abhishek</div>
+
+        <div class="nav2">
+            <div class="navItem"><a href="projects.html">Projects</a></div>
+            <div class="navItem"><a href="about.html">About Me</a></div>
+            <div class="navItem"><a href="contact.html">Contact</a></div>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="buttonB">
+            <a href="index.html"><i class="fas fa-arrow-left"></i> Back</a>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1500);
+        });
+    </script>
+    
+</body>
+</html>
